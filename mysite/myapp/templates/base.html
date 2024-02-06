@@ -12,9 +12,12 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+        footer {
+            flex: 0 0 auto;
+        }
     </style>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 <div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -26,6 +29,10 @@
                 <div class="navbar-nav">
                     <a class="nav-link" href="{% url 'about' %}">О студенте</a>
                     <a class="nav-link" href="{% url 'game' %}">Игра</a>
+                    <a class="nav-link" href="{% url 'form' %}">Форма</a>
+                    <a class="nav-link" href="{% url 'map' %}">Карта</a>
+                    <a class="nav-link" href="{% url 'video' %}">Видео</a>
+                    <a class="nav-link" href="{% url 'text' %}">Текст</a>
                 </div>
             </div>
         </div>
