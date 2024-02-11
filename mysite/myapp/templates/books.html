@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Список книг{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+            <div class="center">
+                <h1>Список книг из базы данных</h1>
+                <div style="max-height: 300px; overflow-y: auto;">
+                    <table class="table mt-1">
+                        <thead>
+                        <tr>
+                            <th scope="col">Название</th>
+                            <th scope="col">Автор</th>
+                            <th scope="col">Год издания</th>
+                            <th scope="col">Количество</th>
+                            <th scope="col">Цена</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for obj in data %}
+                        <tr>
+                            <td>{{ obj.title }}</td>
+                            <td>{{ obj.author }}</td>
+                            <td>{{ obj.publication }}</td>
+                            <td>{{ obj.quantity }}</td>
+                            <td>{{ obj.price }}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

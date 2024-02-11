@@ -10,5 +10,8 @@ urlpatterns = [
     path("thanks", views.thanks, name="thanks"),
     path("map", views.map, name="map"),
     path("video", views.video, name="video"),
-    path("text", views.text, name="text")
+    path("text", views.text, name="text"),
+    path("books", views.books, name="books"),
+    path("image", views.image, name="image")
+
 ]

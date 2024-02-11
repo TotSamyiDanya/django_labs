@@ -1,6 +1,9 @@
+import os
+
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from .forms import UserForm
+from .models import Book
 
 
 def index(request):
@@ -20,6 +23,10 @@ def form(request):
         user_form = UserForm(request.POST)
         if user_form.is_valid():
             user_data = user_form.cleaned_data
+            with open('myapp/static/users.txt', 'a', encoding='utf-8') as file:
+                file.write(f'Name: {user_data['name']}; Surname: {user_data['surname']}; '
+                           f'Patronymic: {user_data['patronymic']}; Faculty: {user_data['faculty']}; '
+                           f'Age: {user_data['age']}; Agreement: {user_data['agreement']}\n')
             return render(request, 'thanks.html', {'data': user_data})
     else:
         user_form = UserForm()
@@ -40,3 +47,12 @@ def video(request):
 
 def text(request):
     return render(request, "text.html")
+
+
+def books(request):
+    books_collection = Book.objects.all()
+    return render(request, "books.html", {'data': books_collection})
+
+
+def image(request):
+    return render(request, "image.html")

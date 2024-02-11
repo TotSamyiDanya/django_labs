@@ -16,8 +16,8 @@
                 </p>
                 <br>
                 <div class="form row mb-4">
-                    <label for="guessField" class="col-sm-4 col-form-label">Введите предположение: </label>
-                    <div class="col-sm-6">
+                    <label for="guessField" class="col-sm-5 col-form-label">Введите предположение: </label>
+                    <div class="col-sm-5">
                         <input type="text" id="guessField" class="guessField form-control">
                     </div>
                     <div class="col-sm-2">
@@ -58,11 +58,11 @@
           lowOrHi.textContent = '';
           setGameOver();
         } else if (guessCount === 10) {
-          lastResult.textContent = '!!!Начать новую игру!!!';
+          lastResult.textContent = 'Начать новую игру';
           lowOrHi.textContent = '';
           setGameOver();
         } else {
-          lastResult.textContent = 'Неправильно!!';
+          lastResult.textContent = 'Неправильно!';
           lastResult.classList.remove('text-success');
           lastResult.classList.add('text-danger');
           if(userGuess < randomNumber) {

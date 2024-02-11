@@ -1,0 +1,3 @@
+Name: Иван; Surname: Иванов; Patronymic: Иванович; Faculty: Естественно-географический; Age: 20; Agreement: True
+Name: Алексей; Surname: Алексеев; Patronymic: Алексеевич; Faculty: Искусства и дизайна; Age: 18; Agreement: True
+Name: Дмитрий; Surname: Дмитриев; Patronymic: Дмитриевич; Faculty: Физико-математический; Age: 20; Agreement: True
